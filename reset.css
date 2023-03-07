@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Montserrat-Alternates;
+    src: url(MontserratAlternatesBlack.ttf);
+}
+
+@font-face {
+    font-family: TheRumor;
+    src: url(TheRumor.ttf);
+}
+
+
+html,
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    background: #111827;
+    color: #EEE7D8;
+    box-sizing: border-box;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+summary {
+    list-style-type: none;
+}
+
+ul,
+ul li {
+    padding: 0%;
+}
+
+h1,
+h2,
+h3,
+p {
+    padding: 0.5em 0;
+}
+
+h1, h2, h3, h4 {
+    font-size: 1.4em;
+    font-family: Montserrat-Alternates;
+}
+
+p, a{
+    font-family: TheRumor;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+input,
+textarea,
+button {
+    border: none;
+}
+
+.btn-dark {
+    background-color: black;
+    padding: 0.9em 1.2em;
+    border: none;
+    color: white;
+    border-radius: 0.5em;
+    width: 50%;
+    font-weight: bold;
+}
+
+.btn-light {
+    background-color: #EEE7D8;
+    border: none;
+    padding: 0.9em 1.2em;
+    border-radius: 0.5em;
+    color: black;
+    width: 22%;
+    font-weight: bold;
+}
+
+svg {
+    width: 6em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 7em 1.5em;
+}
+
+/* Default presentation of header and footer */
+
+/***** HEADER *****/
+header {
+
+    background: #111827;
+    width: 100%;
+    padding: 0.2em 0.8em;
+    z-index: 1;
+    position: fixed;
+}
+
+nav,
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    gap: 2em;
+}
+
+nav ul li a {
+    transition: all 0.8s ease-in-out;
+}
+
+nav ul li a:hover {
+    letter-spacing: 0.4em;
+}
+
+/***** END HEADER *****/
+
+/***** FOOTER *****/
+footer {
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 4em 2em;
+    text-align: start;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+footer div:nth-child(1) {
+    width: 50%;
+    text-align: start;
+}
+
+footer div:nth-child(2) {
+    text-align: end;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+}
+
+footer div ul li {
+    padding: 0;
+}
+
+/***** END FOOTER *****/
