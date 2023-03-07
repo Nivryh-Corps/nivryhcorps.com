@@ -3926,27 +3926,36 @@
             <section id="contact">
                 <div class="section">
                     <h2>Contactez Nous</h2>
-                    <form action="" method="post">
+                    <form id="contact_form">
                         <input
                             type="text"
-                            name="name"
+                            name="client_name"
                             id="name"
                             placeholder="Votre nom ..."
                         >
                         <input
                             type="email"
-                            name="email"
+                            name="client_email"
                             id=""
+                            pattern="[a-zA-Z0-9]+@(gmail|yahoo|mozmail)\.(com|fr|org)"
                             placeholder="example@gmail.com"
+                            title="Email must be under this format 'example@(gmail|yahoo|).(fr|com|org)' "
                         >
                         <textarea
-                            name="request"
+                            name="message"
                             id=""
                             cols="30"
                             rows="10"
                             placeholder="Envoyer votre vision ..."
                         ></textarea>
                         <button class="btn-dark" type="submit">Envoyer votre mail !</button>
+                        <br>
+                        <div class="success">
+                            Your E-Mail was sent successfully.
+                        </div>
+                        <div class="error">
+                            Your E-Mail was not sent.
+                        </div>
                     </form>
                 </div>
             </section>
@@ -4016,5 +4025,27 @@
             </footer>
         </div>
     </body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('rrT9VTrYwQ1PQlJj6');
+        })();
+        let form = document.querySelector('form');
+        let success = document.querySelector('.success');
+        let error = document.querySelector('.error');
+        form.onsubmit = (event) => {
+            event.preventDefault();
+                emailjs.sendForm('service_pi1qfuf', 'template_4pln98n', form)
+                    .then(function() {
+                        error.classList.remove('show');
+                        success.classList.add('show');
+                        event.target[0].value = event.target[1].value = event.target[2].value = '' 
+                    }, function(error) {
+                        success.classList.remove('show');
+                        error.classList.add('show')
+                    });
+        }
+    </script>
     <script src="./animate.js"></script>
 </html>

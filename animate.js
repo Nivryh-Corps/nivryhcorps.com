@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.card');
-
+const sections = document.querySelectorAll('.section');
 
 // Create the observer, same as before:
 let observer = new IntersectionObserver(entries => {
@@ -17,3 +17,4 @@ let observer = new IntersectionObserver(entries => {
 
 
 cards.forEach((el) => observer.observe(el));
+sections.forEach((el) => observer.observe(el));
