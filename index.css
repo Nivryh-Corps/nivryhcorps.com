@@ -4,16 +4,6 @@
 }
 
 @font-face {
-  font-family: SunnySpellsBasic;
-  src: url(SunnySpellsBasic.ttf);
-}
-
-@font-face {
-  font-family: Pasti;
-  src: url(PastiRegular.otf);
-}
-
-@font-face {
   font-family: TheRumor;
   src: url(TheRumor.ttf);
 }
