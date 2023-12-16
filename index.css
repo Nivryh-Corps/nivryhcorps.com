@@ -1,13 +1,11 @@
 @font-face {
   font-family: Montserrat-Alternates;
   src: url(MontserratAlternatesBlack.ttf);
-  font-display: swap;
 }
 
 @font-face {
   font-family: TheRumor;
   src: url(TheRumor.ttf);
-  font-display: swap;
 }
 
 html,
