@@ -282,8 +282,8 @@ footer div ul li {
   height: 19em;
 }
 
-.card-service .card-img svg,
-.card-project .card-img svg {
+.card-service .card-img img,
+.card-project .card-img img {
   width: 100%;
   height: 100%;
 }
@@ -397,8 +397,8 @@ form button {
     padding: 0 0.6em;
   }
 
-  #about svg {
-    width : 15em;
+  .about {
+    width : 80%;
   }
 
   #about p {
